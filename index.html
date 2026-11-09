@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tienda Verdolaga | Productos de Atlético Nacional</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="top">
+  <a class="brand" href="#"><span class="badge"><img src="escudo.png" alt="Escudo de Atlético Nacional"></span><b>Tienda Verdolaga</b></a>
+  <input id="buscar" type="search" placeholder="Buscar camisetas, gorras, termos..." aria-label="Buscar productos">
+  <button id="abrirCarrito" class="cart-btn" aria-label="Abrir carrito">Carrito <span id="contador">0</span></button>
+</header>
+
+<section class="hero">
+  <div>
+    <h1>Viste el verde de tu equipo</h1>
+    <p>Camisetas, gorras, ropa casual y recuerdos de Atlético Nacional.</p>
+    <a href="#catalogo" class="btn">Ver productos</a>
+  </div>
+  <div class="hero-logo"><img src="escudo.png" alt=""></div>
+</section>
+
+<main id="catalogo">
+  <h2>Catálogo</h2>
+  <nav id="filtros" class="filtros" aria-label="Categorías"></nav>
+  <div id="grid" class="grid"></div>
+  <p id="vacio" class="vacio" hidden>No encontramos productos con esa búsqueda. Prueba con otra palabra.</p>
+</main>
+
+<footer>Tienda Verdolaga · Proyecto de tienda en línea para hinchas de Atlético Nacional</footer>
+
+<dialog id="modal"><div id="detalle"></div></dialog>
+
+<div id="overlay"></div>
+<aside id="carrito" class="drawer" aria-label="Carrito de compras">
+  <header>
+    <h3>Tu carrito</h3>
+    <button id="cerrarCarrito" class="x" aria-label="Cerrar carrito">✕</button>
+  </header>
+  <div id="items"></div>
+  <div class="pie">
+    <div class="total"><span>Total</span><span id="total">$0</span></div>
+    <button id="pagar" class="btn-sm">Finalizar compra (simulada)</button>
+  </div>
+</aside>
+
+<div id="toast" role="status"></div>
+<script src="script.js"></script>
+</body>
+</html>
